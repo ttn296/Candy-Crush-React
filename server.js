@@ -5,7 +5,10 @@ const path = require('path');
 
 app.use('/dist', express.static('dist'));
 
+app.use('/src', express.static('src'));
+
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/src/index.html')));
+
 
 app.listen(port, () => {
     console.log(`listening on ${port}`)
